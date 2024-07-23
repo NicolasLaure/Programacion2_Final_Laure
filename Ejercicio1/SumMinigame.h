@@ -1,12 +1,12 @@
 #pragma once
 #include "Scene.h"
 
-class SumMinigame : Scene
+class SumMinigame : public Scene
 {
 	
 public:
-	virtual void Enter() override;
+	virtual void Start() override;
 	virtual void Update() override;
-	virtual void Exit() override;
+	virtual void End() override;
 };
 

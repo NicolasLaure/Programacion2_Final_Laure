@@ -1,9 +1,15 @@
 #pragma once
+#include "ScenesEnum.h"
+
 class Scene
 {
 public:
-	virtual void Enter() = 0;
-	virtual void Update() = 0;
-	virtual void Exit() = 0;
-};
+	Scenes actualScene;
+	Scenes nextScene = Scenes::NONE;
 
+	virtual ~Scene() {}
+	virtual void Start() = 0;
+	virtual void Update() = 0;
+	virtual void End() = 0;
+	Scenes ShouldChangeScene();
+};

@@ -1,8 +1,7 @@
-#include "Program.h"
-
+#include "GameLoop.h"
 
 void main()
 {
-	Program game;
-	game.RunProgram();
+	GameLoop game;
+	game.StartLoop();
 }

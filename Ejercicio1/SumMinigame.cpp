@@ -1,17 +1,21 @@
 #include "SumMinigame.h"
-#include <iostream>
+#include "Utils.h"
 
-using namespace std; 
+using namespace std;
 
-void SumMinigame::Enter()
+void SumMinigame::Start()
 {
-	cout << "Enter SumMinigame";
+	Print("Enter SumMinigame");
 }
 void SumMinigame::Update()
 {
-
+	system("cls");
+	Print("Update SumMinigame");
+	if (_kbhit() && _getch() == 27)
+		nextScene = Scenes::MENU;
 }
-void SumMinigame::Exit()
+
+void SumMinigame::End()
 {
-	cout << "SumMinigame";
+	Print("Exit SumMinigame");
 }
