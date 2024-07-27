@@ -12,7 +12,9 @@ class SumMinigame : public Scene
 {
 private:
 	int numsQty = 5;
-	int sleepDuration = 4000;
+	int numMin = -100;
+	int numMax = 100;
+	int sleepDuration = 2000;
 	int numIndex = 0;
 	T result;
 	T playerInput;

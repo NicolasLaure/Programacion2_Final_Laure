@@ -55,12 +55,14 @@ bool SumMinigame<T>::AllNumsPrinted()
 template<NUMBER T>
 void SumMinigame<T>::PrintNumber()
 {
-	T randomNum = rand() % 201 - 100;
+	T randomNum = rand() % (numMax + abs(numMin) + 1) - abs(numMin);
 	if (floating_point<T>)
 	{
-		randomNum = (T)rand() / RAND_MAX * 200 - 100;
+		randomNum = (T)rand() / RAND_MAX * (numMax + abs(numMin) + 1) - abs(numMin);
 		randomNum = ceilf(randomNum * 100) / 100;
 	}
+	if (result + randomNum < 0)
+		randomNum *= -1;
 
 	result += randomNum;
 	ClearLine(2);
