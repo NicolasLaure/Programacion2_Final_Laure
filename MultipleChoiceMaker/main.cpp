@@ -25,7 +25,13 @@ void main()
 	saver.SaveQuestion("History.question", question2);
 	saver.SaveQuestion("Chemistry.question", question3);
 
-	saver.ReadQuestion("Fut.question");
-	saver.ReadQuestion("History.question");
-	saver.ReadQuestion("Chemistry.question");
+	vector<MultipleChoiceQuestion> readQuestions = vector<MultipleChoiceQuestion>();
+	readQuestions.push_back(saver.ReadQuestion("Fut.question"));
+	readQuestions.push_back(saver.ReadQuestion("History.question"));
+	readQuestions.push_back(saver.ReadQuestion("Chemistry.question"));
+
+	for (int i = 0; i < readQuestions.size(); i++)
+	{
+		readQuestions[i].PrintQuestion();
+	}
 }

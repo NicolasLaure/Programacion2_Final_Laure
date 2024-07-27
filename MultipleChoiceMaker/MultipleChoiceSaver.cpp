@@ -12,18 +12,18 @@ void MultipleChoiceSaver::SaveQuestion(string fileName, MultipleChoiceQuestion* 
 	outputStream.close();
 }
 
-void MultipleChoiceSaver::ReadQuestion(string fileName)
+MultipleChoiceQuestion MultipleChoiceSaver::ReadQuestion(string fileName)
 {
 	ifstream inputStream;
 	inputStream.open(fileName, ios::in | ios::binary);
 	if (!inputStream.is_open() || inputStream.fail())
-		return;
+		return MultipleChoiceQuestion();
 
 	MultipleChoiceQuestion* readQuestion = new MultipleChoiceQuestion();
 	inputStream.read((char*)readQuestion, sizeof(MultipleChoiceQuestion));
 	inputStream.close();
 
-	readQuestion->PrintQuestion();
-
+	MultipleChoiceQuestion auxQuestion = *readQuestion;
 	delete readQuestion;
+	return auxQuestion;
 }

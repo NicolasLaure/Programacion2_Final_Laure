@@ -8,6 +8,6 @@ class MultipleChoiceSaver
 {
 public:
 	void SaveQuestion(string fileName, MultipleChoiceQuestion* question);
-	void ReadQuestion(string fileName);
+	MultipleChoiceQuestion ReadQuestion(string fileName);
 };
 
