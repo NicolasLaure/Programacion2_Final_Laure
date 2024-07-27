@@ -14,8 +14,9 @@ private:
 	int numsQty = 5;
 	int numMin = -100;
 	int numMax = 100;
-	int sleepDuration = 2000;
+	int sleepDuration = 4000;
 	int numIndex = 0;
+	float maxMargin = 0.02f;
 	T result;
 	T playerInput;
 

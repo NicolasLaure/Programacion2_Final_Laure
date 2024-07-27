@@ -29,7 +29,7 @@ void SumMinigame<T>::Update()
 		cout << "Enter The Result: ";
 		cin >> playerInput;
 		cout << "The Result was: " << result << endl;
-		if (playerInput == result)
+		if (areNumsEqual(playerInput, result))
 			cout << "Congratulations, You Win\n";
 		else
 			cout << "Wrong Result, You Lose\n";
@@ -77,5 +77,5 @@ bool SumMinigame<T>::areNumsEqual(T a, T b)
 {
 	T diff = a - b;
 	T diffMag = diff * diff;
-	return diffMag < 0.02;
+	return diffMag < maxMargin;
 }
