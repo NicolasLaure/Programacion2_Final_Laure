@@ -1,7 +1,4 @@
 #include "GameLoop.h"
-#include "MenuScene.h"
-
-#include <iostream>
 
 void GameLoop::StartLoop()
 {

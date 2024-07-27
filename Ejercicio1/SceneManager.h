@@ -1,6 +1,9 @@
 #pragma once
 #include "Scene.h"
 #include <concepts>
+#include "MenuScene.h"
+#include "SumMinigame.h"
+#include "ChoicesMinigame.h"
 
 template <class T>
 concept SceneObject = std::derived_from<T, Scene>;

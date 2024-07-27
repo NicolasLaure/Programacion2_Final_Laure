@@ -1,5 +1,3 @@
-#include "MenuScene.h"
-#include "SumMinigame.h"
 
 template<SceneObject T>
 SceneManager::SceneManager(T* initialScene)

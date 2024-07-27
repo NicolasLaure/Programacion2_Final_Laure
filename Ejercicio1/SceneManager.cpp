@@ -19,6 +19,9 @@ void SceneManager::CurrentSceneFlow()
 	case Scenes::SUM_MINIGAME:
 		ChangeScene<SumMinigame<float>>();
 		break;
+	case Scenes::MULTIPLE_CHOICE_MINIGAME:
+		ChangeScene<ChoicesMinigame>();
+		break;
 	case Scenes::NONE:
 		break;
 	default:

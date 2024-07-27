@@ -24,7 +24,7 @@ void MenuScene::Update()
 			nextScene = Scenes::SUM_MINIGAME;
 			break;
 		case '2':
-			nextScene = Scenes::SUM_MINIGAME;
+			nextScene = Scenes::MULTIPLE_CHOICE_MINIGAME;
 			break;
 		case '3':
 			nextScene = Scenes::SUM_MINIGAME;
