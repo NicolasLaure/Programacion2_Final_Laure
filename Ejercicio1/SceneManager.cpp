@@ -17,7 +17,7 @@ void SceneManager::CurrentSceneFlow()
 		ChangeScene<MenuScene>();
 		break;
 	case Scenes::SUM_MINIGAME:
-		ChangeScene<SumMinigame>();
+		ChangeScene<SumMinigame<float>>();
 		break;
 	case Scenes::NONE:
 		break;

@@ -148,7 +148,6 @@
     <ClCompile Include="MenuScene.cpp" />
     <ClCompile Include="Scene.cpp" />
     <ClCompile Include="SceneManager.cpp" />
-    <ClCompile Include="SumMinigame.cpp" />
     <ClCompile Include="Utils.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +161,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SceneManager.tpp" />
+    <None Include="SumMinigame.tpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

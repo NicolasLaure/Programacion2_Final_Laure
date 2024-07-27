@@ -1,9 +1,6 @@
-#include "SumMinigame.h"
-#include "Utils.h"
 
-using namespace std;
-
-void SumMinigame::Start()
+template<NUMBER T>
+void SumMinigame<T>::Start()
 {
 	system("cls");
 	Print("Sum Minigame: Mentally Sum the numbers");
@@ -11,7 +8,9 @@ void SumMinigame::Start()
 	numIndex = 0;
 	result = 0;
 }
-void SumMinigame::Update()
+
+template<NUMBER T>
+void SumMinigame<T>::Update()
 {
 	if (_kbhit() && _getch() == 27)
 	{
@@ -29,6 +28,7 @@ void SumMinigame::Update()
 		SetCursorPos({ 0,2 });
 		cout << "Enter The Result: ";
 		cin >> playerInput;
+		cout << "The Result was: " << result << endl;
 		if (playerInput == result)
 			cout << "Congratulations, You Win\n";
 		else
@@ -40,23 +40,40 @@ void SumMinigame::Update()
 	}
 }
 
-void SumMinigame::End()
+template<NUMBER T>
+void SumMinigame<T>::End()
 {
 	Print("Exit SumMinigame");
 }
 
-bool SumMinigame::AllNumsPrinted()
+template<NUMBER T>
+bool SumMinigame<T>::AllNumsPrinted()
 {
 	return numIndex >= numsQty;
 }
 
-void SumMinigame::PrintNumber()
+template<NUMBER T>
+void SumMinigame<T>::PrintNumber()
 {
-	int randomNum = rand() % 201 - 100;
+	T randomNum = rand() % 201 - 100;
+	if (floating_point<T>)
+	{
+		randomNum = (T)rand() / RAND_MAX * 200 - 100;
+		randomNum = ceilf(randomNum * 100) / 100;
+	}
+
 	result += randomNum;
 	ClearLine(2);
 	SetCursorPos({ 0,2 });
 	cout << randomNum;
 	Sleep(sleepDuration);
 	numIndex++;
+}
+
+template<NUMBER T>
+bool SumMinigame<T>::areNumsEqual(T a, T b)
+{
+	T diff = a - b;
+	T diffMag = diff * diff;
+	return diffMag < 0.02;
 }

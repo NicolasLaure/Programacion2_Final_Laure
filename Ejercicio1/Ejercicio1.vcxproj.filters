@@ -18,9 +18,6 @@
     <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SumMinigame.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="Utils.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
@@ -62,6 +59,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="SceneManager.tpp">
+      <Filter>Source Files</Filter>
+    </None>
+    <None Include="SumMinigame.tpp">
       <Filter>Source Files</Filter>
     </None>
   </ItemGroup>
