@@ -9,10 +9,6 @@ MultipleChoiceQuestion FileReader::ReadQuestionFile(std::string fileName)
 	if (!inputStream.is_open() || inputStream.fail())
 		return MultipleChoiceQuestion();
 
-	/*MultipleChoiceQuestion* readQuestion = new MultipleChoiceQuestion();
-	inputStream.read((char*)readQuestion, sizeof(MultipleChoiceQuestion));
-	inputStream.close();*/
-
 	char cursor = ' ';
 	string readQuestion = "";
 	while (cursor != '\0')
