@@ -5,6 +5,11 @@ void Print(string text)
 	cout << text;
 }
 
+void PrintError(string text)
+{
+	cerr << endl << text << endl;
+}
+
 void SetCursorPos(COORD pos)
 {
 	HANDLE handle = GetStdHandle(STD_OUTPUT_HANDLE);

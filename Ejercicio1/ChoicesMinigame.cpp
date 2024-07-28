@@ -5,7 +5,7 @@
 void ChoicesMinigame::Start()
 {
 	FileReader reader;
-	questions.push_back(reader.ReadQuestionFile("Fut.question"));
+	questions.push_back(reader.ReadQuestionFile("Fut1.question"));
 	questions.push_back(reader.ReadQuestionFile("Chemistry.question"));
 	questions.push_back(reader.ReadQuestionFile("History.question"));
 	currentQuestion = 0;

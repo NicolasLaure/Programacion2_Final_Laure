@@ -6,5 +6,6 @@
 using namespace std; 
 
 void Print(string text);
+void PrintError(string text);
 void SetCursorPos(COORD pos);
 void ClearLine(int lineNum);
