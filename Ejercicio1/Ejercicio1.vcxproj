@@ -145,6 +145,7 @@
   <ItemGroup>
     <ClCompile Include="ChoicesMinigame.cpp" />
     <ClCompile Include="CorruptedFileException.cpp" />
+    <ClCompile Include="DefinitionsMinigame.cpp" />
     <ClCompile Include="FileOpeningException.cpp" />
     <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="GameLoop.cpp" />
@@ -159,6 +160,7 @@
   <ItemGroup>
     <ClInclude Include="ChoicesMinigame.h" />
     <ClInclude Include="CorruptedFileException.h" />
+    <ClInclude Include="DefinitionsMinigame.h" />
     <ClInclude Include="FileOpeningException.h" />
     <ClInclude Include="FileReader.h" />
     <ClInclude Include="GameLoop.h" />

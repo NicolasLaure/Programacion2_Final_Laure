@@ -22,6 +22,9 @@ void SceneManager::CurrentSceneFlow()
 	case Scenes::MULTIPLE_CHOICE_MINIGAME:
 		ChangeScene<ChoicesMinigame>();
 		break;
+	case Scenes::FIND_BY_DEFINE_MINIGAME:
+		ChangeScene<DefinitionsMinigame>();
+		break;
 	case Scenes::NONE:
 		break;
 	default:

@@ -4,6 +4,7 @@
 #include "MenuScene.h"
 #include "SumMinigame.h"
 #include "ChoicesMinigame.h"
+#include "DefinitionsMinigame.h"
 
 template <class T>
 concept SceneObject = std::derived_from<T, Scene>;
