@@ -5,19 +5,23 @@
 
 void ChoicesMinigame::Start()
 {
-	FileReader reader;
-	try
-	{
-		questions.push_back(reader.ReadQuestionFile("Fut1.question"));
-		questions.push_back(reader.ReadQuestionFile("Chemistry.question"));
-		questions.push_back(reader.ReadQuestionFile("History.question"));
-	}
-	catch (const CorruptedFileException& e)
-	{
-		PrintError(e.what());
-		system("pause");
-	}
+	paths.push_back("Fut.question");
+	paths.push_back("Chemistry.question");
+	paths.push_back("History.question");
 
+	FileReader reader;
+	for (int i = 0; i < paths.size(); i++)
+	{
+		try
+		{
+			questions.push_back(reader.ReadQuestionFile(paths[i]));
+		}
+		catch (const CorruptedFileException& e)
+		{
+			PrintError("Question " + to_string(i + 1) + " " + (string)e.what());
+			system("pause");
+		}
+	}
 
 	currentQuestion = 0;
 	correctAnswers = 0;

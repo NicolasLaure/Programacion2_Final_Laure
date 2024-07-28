@@ -4,7 +4,7 @@
 class CorruptedFileException : exception 
 {
 private:
-	string message = "File Was Corrupted No Questions Loaded\n";
+	string message = "File Was Corrupted\n";
 
 public:
 	CorruptedFileException();

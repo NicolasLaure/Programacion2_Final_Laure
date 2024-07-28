@@ -6,6 +6,7 @@ class ChoicesMinigame : public Scene
 {
 private:
 	std::vector<MultipleChoiceQuestion> questions;
+	std::vector<std::string> paths;
 	int currentQuestion = 0;
 	int correctAnswers = 0;
 public:
