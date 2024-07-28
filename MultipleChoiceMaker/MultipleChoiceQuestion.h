@@ -5,10 +5,11 @@
 class MultipleChoiceQuestion
 {
 private:
+
+public:
 	std::string question;
 	std::vector<MultipleChoiceAnswer> answers;
 
-public:
 	MultipleChoiceQuestion();
 	MultipleChoiceQuestion(std::string question, std::vector<MultipleChoiceAnswer> answers);
 	void PrintQuestion();
