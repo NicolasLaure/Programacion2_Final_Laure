@@ -2,6 +2,7 @@
 #include <fstream>
 #include "Utils.h"
 #include "FileOpeningException.h"
+#include "CorruptedFileException.h"
 
 using namespace std;
 MultipleChoiceQuestion FileReader::ReadQuestionFile(std::string fileName)
@@ -45,12 +46,10 @@ MultipleChoiceQuestion FileReader::ReadQuestionFile(std::string fileName)
 	}
 	catch (const ifstream::failure& e)
 	{
-		PrintError(e.what());
+		throw CorruptedFileException();
 	}
 	catch (const FileOpeningException& fileOpeningException)
 	{
-		PrintError(fileOpeningException.what());
-		system("pause");
-		exit(0);
+		throw CorruptedFileException();
 	}
 }

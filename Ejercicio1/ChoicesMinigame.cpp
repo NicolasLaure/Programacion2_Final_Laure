@@ -1,13 +1,24 @@
 #include "ChoicesMinigame.h"
 #include "Utils.h"
 #include "FileReader.h"
+#include "CorruptedFileException.h"
 
 void ChoicesMinigame::Start()
 {
 	FileReader reader;
-	questions.push_back(reader.ReadQuestionFile("Fut1.question"));
-	questions.push_back(reader.ReadQuestionFile("Chemistry.question"));
-	questions.push_back(reader.ReadQuestionFile("History.question"));
+	try
+	{
+		questions.push_back(reader.ReadQuestionFile("Fut1.question"));
+		questions.push_back(reader.ReadQuestionFile("Chemistry.question"));
+		questions.push_back(reader.ReadQuestionFile("History.question"));
+	}
+	catch (const CorruptedFileException& e)
+	{
+		PrintError(e.what());
+		system("pause");
+	}
+
+
 	currentQuestion = 0;
 	correctAnswers = 0;
 }
