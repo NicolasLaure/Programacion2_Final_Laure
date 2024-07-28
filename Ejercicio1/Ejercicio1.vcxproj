@@ -144,6 +144,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="ChoicesMinigame.cpp" />
+    <ClCompile Include="FileReader.cpp" />
     <ClCompile Include="GameLoop.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="MenuScene.cpp" />
@@ -155,6 +156,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ChoicesMinigame.h" />
+    <ClInclude Include="FileReader.h" />
     <ClInclude Include="GameLoop.h" />
     <ClInclude Include="MenuScene.h" />
     <ClInclude Include="MultipleChoiceAnswer.h" />

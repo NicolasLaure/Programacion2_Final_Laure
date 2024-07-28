@@ -1,26 +1,19 @@
 #include "ChoicesMinigame.h"
 #include "Utils.h"
+#include "FileReader.h"
 
 void ChoicesMinigame::Start()
 {
-	vector<MultipleChoiceAnswer> answers;
-	answers.push_back(MultipleChoiceAnswer("Messi", true));
-	answers.push_back(MultipleChoiceAnswer("Cr7", false));
-	answers.push_back(MultipleChoiceAnswer("Mbappe", false));
-	answers.push_back(MultipleChoiceAnswer("Pele", false));
-
-	questions.push_back(MultipleChoiceQuestion("Who's the goat?", answers));
+	FileReader reader;
+	questions.push_back(reader.ReadQuestionFile("Fut.question"));
+	questions.push_back(reader.ReadQuestionFile("Chemistry.question"));
+	questions.push_back(reader.ReadQuestionFile("History.question"));
 	currentQuestion = 0;
 	correctAnswers = 0;
 }
 
 void ChoicesMinigame::Update()
 {
-	if (_kbhit() && _getch() == 27)
-	{
-		nextScene = Scenes::MENU;
-		return;
-	}
 	system("cls");
 	if (currentQuestion < questions.size())
 	{
