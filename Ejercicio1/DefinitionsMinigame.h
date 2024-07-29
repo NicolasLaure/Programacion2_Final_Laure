@@ -27,11 +27,14 @@ private:
 	int printedWords = 0;
 	int definitionsQty = 5;
 
+	int loadingStage;
+
 	void RequestWords();
 	void SetWords();
 	void RequestDefinition(string word);
 	void SetDefinition(int index);
 	bool AreAllTasksDone();
+	void LoadingScreen();
 
 public:
 	virtual void Start() override;

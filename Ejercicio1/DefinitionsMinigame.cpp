@@ -21,8 +21,7 @@ void DefinitionsMinigame::Update()
 {
 	if (!AreAllTasksDone())
 	{
-		system("cls");
-		Print("Loading");
+		LoadingScreen();
 
 		if (wordsRequestTask.is_done() && words.size() == 0)
 			SetWords();
@@ -150,4 +149,15 @@ bool DefinitionsMinigame::AreAllTasksDone()
 	}
 
 	return true;
+}
+
+void DefinitionsMinigame::LoadingScreen()
+{
+	system("cls");
+	Print("Loading");
+	for (int i = 0; i < loadingStage; i++)
+	{
+		Print(".");
+	}
+	loadingStage = loadingStage > 2 ? 0 : loadingStage + 1;
 }
