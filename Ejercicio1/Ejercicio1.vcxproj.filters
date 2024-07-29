@@ -106,5 +106,6 @@
     <None Include="SumMinigame.tpp">
       <Filter>Source Files</Filter>
     </None>
+    <None Include="packages.config" />
   </ItemGroup>
 </Project>
